@@ -1,4 +1,4 @@
-verresource "aws_instance" "MPG-Server" {
+verresource "aws_instance" "Windows-MPG-Server" {
   ami           = var.ami
   instance_type = var.instance_type
 
