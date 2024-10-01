@@ -5,4 +5,8 @@ resource "aws_instance" "Windows-MPG-Server" {
   credit_specification {
     cpu_credits = "unlimited"
   }
+
+  tags = {
+    Name = "Windows-MPG-Server"
+  }
 }
