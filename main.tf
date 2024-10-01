@@ -1,4 +1,4 @@
-resource "aws_instance" "Windows-MPG-Server" {
+resource "aws_instance" "var.server_name" {
   ami           = var.ami
   instance_type = var.instance_type
 #  ami           = "ami-03db23f7d74959cbb"
