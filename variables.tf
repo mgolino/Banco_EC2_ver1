@@ -9,3 +9,9 @@ variable "ami" {
   description = "What AMI do I want to launch"
   default = "ami-03db23f7d74959cbb"
   }
+
+variable "server_name" {
+  type = string
+  description = "This is the server name"
+  default = "Windows-MPG-Server"
+ }
