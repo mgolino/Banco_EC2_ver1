@@ -8,8 +8,3 @@ variable "ami" {
   type = string
   default = "ami-03db23f7d74959cbb"
   }
-
-variable "network_interface_id" {
-  type = string
-  default = "network_id_from_aws"
-}
