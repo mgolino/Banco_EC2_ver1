@@ -6,5 +6,6 @@ variable "instance_type" {
 
 variable "ami" {
   type = string
+  description = "What AMI do I want to launch"
   default = "ami-03db23f7d74959cbb"
   }
