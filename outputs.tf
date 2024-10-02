@@ -7,6 +7,10 @@ output "instance_ip_addr" {
   description = "The private IP address of the server"
 }
 
+output "instance_type" {
+  value = aws_instance.Windows-MPG-Server.instance_type
+}
+
 output "instance_arn" {
   value = aws_instance.Windows-MPG-Server.arn
 }
