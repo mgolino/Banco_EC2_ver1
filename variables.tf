@@ -1,8 +1,8 @@
-variable "instance_type" {
+/*variable "instance_type" {
   type = string
   description = "Type of EC2 instance to provision"
   default     = "t2.medium"
-}
+}*/
 
 variable "ami" {
   type = string
