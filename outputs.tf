@@ -3,7 +3,7 @@ output "instance_ami" {
 }
 
 output "instance_ip_addr" {
-  value = aws_instance.Windows-MPG-Server_ip
+  value = aws_instance.Windows-MPG-Server.private_ip
 }
 
 /*output "instance_arn" {
