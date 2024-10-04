@@ -1,4 +1,4 @@
-resource "aws_instance" "Windows-MPG-Server" {
+lopmentresource "aws_instance" "Windows-MPG-Server" {
   # count = 1 # Number of instances to create
   ami           = var.ami
   instance_type = var.instance_type
@@ -10,7 +10,7 @@ resource "aws_instance" "Windows-MPG-Server" {
   }
 
   tags = {
-    Name = "Windows-MPG-Server"
+    Development = "Env"
 #     Name = "Server ${count.index}"
   }
 }
