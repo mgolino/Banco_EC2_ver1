@@ -1,3 +1,6 @@
+
+data "aws_ebs_default_kms_key" "current" {}
+
 resource "aws_instance" "Windows-MPG-Server" {
   # count = 1 # Number of instances to create
   ami           = var.ami
@@ -9,7 +12,7 @@ resource "aws_instance" "Windows-MPG-Server" {
     volume_type = "gp2"
     volume_size = 200
     encrypted   = true
-    kms_key_id  = aws_ebs_default_kms_key.mrk-435ef7d1448341e784453f666cf0f1da.key_arn
+    kms_key_id  = data.aws_ebs_default_kms_key.current.key_arn
   }
   credit_specification {
     cpu_credits = "unlimited"
