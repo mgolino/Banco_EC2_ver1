@@ -6,6 +6,7 @@ resource "aws_instance" "Windows-MPG-Server" {
   ami           = var.ami
   instance_type = var.instance_type
   subnet_id = "subnet-0baaac8c622257ef8"
+  availability_zone = "us-east-1b"
 #  ami           = "ami-03db23f7d74959cbb"
 #  instance_type = "t2.small"
   root_block_device {
