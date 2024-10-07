@@ -12,6 +12,7 @@ resource "aws_instance" "Windows-MPG-Server" {
 
   tags = {
     Environment = "Dev"
+    Name = var.tag_name
 #     Name = "Server ${count.index}"
   }
 }
