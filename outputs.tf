@@ -20,6 +20,11 @@ output "instance_id" {
   value = aws_instance.Windows-MPG-Server.id
 }
 
+output "availability_zone" {
+  description = "AZ that the instance is in"
+  value = aws_instance.Windows-MPG-Server.availability_zone
+}
+
 /* output "instance_public_ip" {
   description = "The public IP address of the server"
   value = aws_instance.Windows-MPG-Server.public_ip
