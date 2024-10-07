@@ -1,5 +1,5 @@
 
-data "aws_ebs_default_kms_key" "current" {}
+data "aws_ebs_default_kms_key" "ebs_kms_key" {}
 
 resource "aws_instance" "Windows-MPG-Server" {
   # count = 1 # Number of instances to create
@@ -12,7 +12,7 @@ resource "aws_instance" "Windows-MPG-Server" {
     volume_type = "gp2"
     volume_size = 200
     encrypted   = true
-    kms_key_id  = data.aws_ebs_default_kms_key.current.key_arn
+    kms_key_id  = data.aws_ebs_default_kms_key.ebs_kms_key.key_arn
   }
   credit_specification {
     cpu_credits = "unlimited"
