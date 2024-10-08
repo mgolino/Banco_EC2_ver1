@@ -27,7 +27,7 @@ output "availability_zone" {
 
 output "vpc_security_group_ids" {
   description = "Security Group assigned"
-  value = 
+  value = data.aws_security_group.MPG-SG.id
 
 /* output "instance_public_ip" {
   description = "The public IP address of the server"
