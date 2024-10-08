@@ -7,10 +7,8 @@ filter {
   name = "platform"
   values = ["windows"]
   }
-filter {
-  name = "owners"
-  values = ["amazon"]
-  }
+
+  owners = ["amazon"]
 }
 
 resource "aws_instance" "Windows-MPG-Server" {
