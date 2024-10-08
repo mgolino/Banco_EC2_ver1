@@ -2,7 +2,7 @@
 data "aws_ebs_default_kms_key" "ebs_kms_key" {}
 
 data "aws_security_group" "sg-02187bbed09dbd891" {
-    name = "sg-02187bbed09dbd891"
+    name = "MPG-SG"
   }
 
 
