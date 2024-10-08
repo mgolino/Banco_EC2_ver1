@@ -1,6 +1,15 @@
 
 data "aws_ebs_default_kms_key" "ebs_kms_key" {}
-data "aws_security_group" "MPG-SG" {}
+
+data "aws_security_groups" "MPG-SG" {
+  tags = {
+    name = "Main_SG"
+  }
+}
+
+
+
+
 data "aws_ami" "windows" {
   most_recent = true
 
