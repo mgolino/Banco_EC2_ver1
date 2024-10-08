@@ -1,9 +1,13 @@
 
 data "aws_ebs_default_kms_key" "ebs_kms_key" {}
+data "aws_ami" "windows" {
+  most_recent = true
+}
 
 resource "aws_instance" "Windows-MPG-Server" {
   # count = 1 # Number of instances to create
-  ami           = var.ami
+#  ami           = var.ami
+  ami = data.aws_ami.windows.id
   instance_type = var.instance_type
   subnet_id = "subnet-0ba3d6a676259e6f7"
   availability_zone = "us-east-1b"
