@@ -10,6 +10,7 @@ filter {
 filter {
   name = "owners"
   values = ["amazon"]
+  }
 }
 
 resource "aws_instance" "Windows-MPG-Server" {
