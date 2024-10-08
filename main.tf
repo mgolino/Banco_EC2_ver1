@@ -7,7 +7,10 @@ filter {
   name = "platform"
   values = ["windows"]
   }
-
+filter {
+  name = "name"
+  values = ["Windows_Server-2022-English-Full-Base-2024.09*"]
+  }
   owners = ["amazon"]
 }
 
