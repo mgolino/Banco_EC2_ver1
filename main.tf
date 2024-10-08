@@ -1,13 +1,9 @@
 
 data "aws_ebs_default_kms_key" "ebs_kms_key" {}
 
-data "aws_security_groups" "MPG-SG" {
-  tags = {
-    name = "Main_SG"
+data "aws_security_group" "MPG-SG" {
+    name = "sg-02187bbed09dbd891"
   }
-}
-
-
 
 
 data "aws_ami" "windows" {
@@ -30,7 +26,7 @@ resource "aws_instance" "Windows-MPG-Server" {
   ami = data.aws_ami.windows.id
   instance_type = var.instance_type
   key_name = "MPG-Server"
-  security_groups = data.aws_security_group.MPG-SG.name
+  vpc_security_group_ids = [data.aws_security_group.MPG-SG.id]
   subnet_id = "subnet-0ba3d6a676259e6f7"
   availability_zone = "us-east-1b"
 #  ami           = "ami-03db23f7d74959cbb"
