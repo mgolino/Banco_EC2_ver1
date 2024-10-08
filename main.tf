@@ -21,7 +21,7 @@ resource "aws_instance" "Windows-MPG-Server" {
   ami = data.aws_ami.windows.id
   instance_type = var.instance_type
   key_name = "MPG-Server"
-  security_groups = "MPG-SG"
+  security_groups = data.aws_security_group.MPG-SG.name
   subnet_id = "subnet-0ba3d6a676259e6f7"
   availability_zone = "us-east-1b"
 #  ami           = "ami-03db23f7d74959cbb"
