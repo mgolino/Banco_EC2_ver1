@@ -1,7 +1,7 @@
 
 data "aws_ebs_default_kms_key" "ebs_kms_key" {}
 data "aws_ami" "windows" {
-  most_recent = true
+#  most_recent = true
 
 filter {
   name = "platform"
